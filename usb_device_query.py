@@ -46,6 +46,9 @@ def main():
                 output_line = line.strip("\n") + "," +vendor_name1 + "," + vendor_name2 + "," + vendor_name3 + "," + vid + "," + pid + "," + serial_num 
                 output_lines.append(output_line)
             except:
+                vid , pid, serial_num , vendor_name1,vendor_name2,vendor_name3 = "error","error","error","error","error","error"
+                output_line = line.strip("\n") + "," +vendor_name1 + "," + vendor_name2 + "," + vendor_name3 + "," + vid + "," + pid + "," + serial_num 
+                output_lines.append(output_line)
                 pass
     
     with open("output.csv","a") as file_object2:
